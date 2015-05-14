@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>{$sys.site_title}</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="{$sys.site_keywords}">
+<meta name="description" content="{$sys.site_description}">
+<meta name="author" content="{$sys.site_title}">
+
+<!--#include file="_head.html"-->
+</head>
+<script language="javascript">
+function launchFullscreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if(element.msRequestFullscreen){ 
+    element.msRequestFullscreen();  
+  } else if(element.webkitRequestFullscreen) {
+    element.webkitRequestFullScreen();
+  }}
+</script>
+<body>
+<video id="videoElement" src="movie.mp4" width="320" height="240" controls="controls" autoplay="autoplay" loop="loop">你的浏览器不支持视频播放</video>
+<a href="javascript:;" onClick="launchFullscreen(document.getElementById('videoElement'));return false; ">点击全屏播放</a>
+</body>
+</html>

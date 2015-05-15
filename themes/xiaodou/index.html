@@ -24,33 +24,73 @@
   以获得更好的体验！</p>
 -->
 
-<div id="main" class="am-g am-margin">
-  <div id="mainLeft" class="am-u-md-8">
+<div id="main" class="am-g">
+  <div id="mainLeft" class="am-u-md-8 am-g-collapse">
     <div class="am-g">
-      <video class="am-u-md-12" src="assets/movie/movie.mp4" controls></video>
+      <video id="videoElement" class="am-u-md-12" style="background:#000;" src="assets/movie/movie.mp4" controls></video>
     </div>
-    <div class="am-g am-margin-vertical">
+    <div class="am-g">
       <div id="more" class="am-u-md-12 am-padding-vertical" style="background:rgb(185,185,185);"><a href="" class="am-fr am-margin-right am-text-primary">更多</a></div>
     </div>
   </div>
   <div id="mainRight" class="am-u-md-4">
     <div id="weather" class="am-g">
-      <div class="am-u-md-3"> </div>
-      <div class="am-u-md-3"> </div>
-      <div class="am-u-md-3"> </div>
-      <div class="am-u-md-3"> </div>
+      <div class="am-u-md-12">
+        <div class="am-g">
+          <div class="am-u-md-12 am-text-center white weatherTitle" style="background:rgb(9,26,62);">四川·成都</div>
+        </div>
+      </div>
+      <div class="am-u-md-12">
+        <div class="am-g">
+          <div class="am-u-md-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(9,26,62);"><img src="http://api.map.baidu.com/images/weather/night/yin.png"/>
+            <div>周五 05月15日 (实时：22℃)</div>
+            <div>阵雨转阴</div>
+            <div>北风微风</div>
+            <div>30 ~ 20℃</div>
+          </div>
+          <div class="am-u-md-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(58,63,79);"><img src="http://api.map.baidu.com/images/weather/night/yin.png"/>
+            <div>周五 05月15日</div>
+            <div>阵雨转阴</div>
+            <div>北风微风</div>
+            <div>30 ~ 20℃</div>
+          </div>
+          <div class="am-u-md-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(92,99,119);"><img src="http://api.map.baidu.com/images/weather/night/yin.png"/>
+            <div>周五 05月15日</div>
+            <div>阵雨转阴</div>
+            <div>北风微风</div>
+            <div>30 ~ 20℃</div>
+          </div>
+          <div class="am-u-md-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(100,100,100);"><img src="http://api.map.baidu.com/images/weather/night/yin.png"/>
+            <div>周五 05月15日</div>
+            <div>阵雨转阴</div>
+            <div>北风微风</div>
+            <div>30 ~ 20℃</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="am-g">
-      <div id="siChuanHot" class="am-u-md-12"> </div>
+      <div id="siChuanHot" class="am-u-md-12" style="background:url(_assets/img/SiChuanHot.png)"></div>
     </div>
     <div class="am-g">
       <div id="scienceContent" class="am-u-md-6" style="background:rgb(91,99,120);">
         <h1 class="am-text-center white">网络科普内容</h1>
         <p class="white" style="text-indent:2em;">当今研究运动生物力学的主要机构大部分在东欧国家,如波兰、俄罗斯（主要在莫斯科、圣彼得堡、伏尔加格勒、克拉斯诺达尔、新西伯利亚等城市进行生物力学的研究）、乌克兰（基辅国立体育大学和哈尔科夫国立体育科学院）.现代运动生物力学研究的现实意义是由以下二方面原因决定的：一方面,体育运动的社会意义不断提高,体育运动项目的数量不断增加,这些决定了进行运动生物力学研究的必要性和具有前途。</p>
       </div>
-      <div id="realTimeUpdate" class="am-u-md-6" style="background-size:cover; position:relative;height: 345px;">
-        <div style="position:absolute; width:100%;left:0; right:0; bottom:0;"> <span class="am-fr am-margin-right-bg">社区实时动态</a> </span>
+      <div id="realTimeUpdate" class="am-u-md-6">
+        <div class="am-g">
+          <div class="am-u-md-12" style="position:relative"></div>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
+<div id="foot">
+  <div class="am-g">
+    <div class="am-u-md-12 am-padding-vertical-xs" style="background:rgb(72,79,99)">
+      <marquee onmouseover=this.stop() onmouseout=this.start()>
+      <div class="white am-text-xl">百度新闻是包含海量资讯的新闻服务平台,真实反映每时每刻的新闻热点。您可以搜索新闻事件、热点话题、人物动态、产品资讯等,快速了解它们的最新进展。</div>
+      </marquee>
     </div>
   </div>
 </div>
@@ -69,7 +109,10 @@
 <script src="assets/js/ajax.js"></script> 
 <!--<![endif]--> 
 <script type="text/javascript" language="javascript">
-
+//初始化天气
+function initWeather(jsonInfo){
+		
+	};
 </script>
 </body>
 </html>

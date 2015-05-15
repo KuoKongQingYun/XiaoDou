@@ -1,3 +1,28 @@
+html{
+	font-size:10px;
+}
 .white {
 	color: #FFF;
+}
+#main #mainLeft #videoElement{
+	height:60rem;
+} 
+#main #mainLeft #more{
+	height:5rem;
+} 
+#main #mainRight #weather .weatherTitle{
+	height:2rem;
+}
+#main #mainRight #weather .weatherItem{
+	height:15rem;
+} 
+#main #mainRight #siChuanHot{
+	height:18rem;
+	overflow:hidden;
+	background-size:cover!important;
+	background-repeat:no-repeat!important;
+}
+#main #mainRight #scienceContent{
+	height:30rem;
+	overflow:hidden;
 }

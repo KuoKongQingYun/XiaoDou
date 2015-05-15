@@ -5,7 +5,7 @@ html{
 	color: #FFF;
 }
 #main #mainLeft #videoElement{
-	height:60rem;
+	height:70rem;
 } 
 #main #mainLeft #more{
 	height:5rem;
@@ -17,12 +17,12 @@ html{
 	height:15rem;
 } 
 #main #mainRight #siChuanHot{
-	height:18rem;
+	height:22rem;
 	overflow:hidden;
 	background-size:cover!important;
 	background-repeat:no-repeat!important;
 }
 #main #mainRight #scienceContent{
-	height:30rem;
+	height:36rem;
 	overflow:hidden;
 }

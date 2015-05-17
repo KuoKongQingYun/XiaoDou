@@ -1,0 +1,46 @@
+html{
+	font-size:10px;
+}
+ul{
+	padding:0;
+}
+li{
+	margin:0;
+}
+body{
+	background-size:cover;
+}
+.line{
+	max-width:95%;
+	height:20rem;
+}
+.line .left{
+	max-width:90%;
+	height:20rem;
+	background:rgba(51,120,189,0.9);
+}
+.line .left .title{
+}
+.line .left .title .former{
+	font-size:3rem;
+}
+.line .left .title .latter{
+	font-size:4rem;
+}
+.line .right{
+	max-width:90%;
+	height:20rem;
+	background:rgba(53,62,119,0.9);
+}
+.line .right .list{
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	margin:auto;
+}
+.line .right .list .item{
+	line-height:4rem;
+	height:4rem;
+	list-style-type:none;
+}

@@ -1,0 +1,57 @@
+html{
+	font-size:10px;
+}
+.white {
+	color: #FFF;
+}
+.relative{
+	position:relative;
+}
+#main{
+	max-width:1366px;
+}
+#main #mainLeft #videoElement{
+	height:70rem;
+} 
+#main #mainLeft #more{
+	height:5rem;
+} 
+#main #mainRight #weather .weatherTitle{
+	height:2rem;
+}
+#main #mainRight #weather .weatherItem{
+	height:15rem;
+} 
+#main #mainRight #siChuanHot{
+	height:22rem;
+	overflow:hidden;
+	background-size:cover!important;
+	background-repeat:no-repeat!important;
+}
+#main #mainRight #siChuanHot .title{
+	position:absolute;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,0.6); 
+	width:100%;
+}
+#main #mainRight #scienceContent{
+	height:36rem;
+	overflow:hidden;
+}
+#main #mainRight #realTimeUpdate{
+	height:36rem;
+	overflow:hidden;
+	background-size:cover!important;
+	background-repeat:no-repeat!important;
+}
+#main #mainRight #realTimeUpdate .title{
+	position:absolute;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,0.6); 
+	width:100%;
+}
+#foot{
+	max-width:1366px;
+}

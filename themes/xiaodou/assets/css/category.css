@@ -1,0 +1,37 @@
+html{
+	font-size:8px;
+}
+body{
+	background-size:cover;
+}
+#main .column
+{
+	height:60rem;
+}
+#main .column .top
+{
+	z-index:1;
+	height:10rem;
+	width:10rem;
+	border-radius:5rem;
+	background:rgb(56,55,53);
+}
+#main .column .bottom
+{
+	height:55rem;
+	width:25rem;
+	bottom:0;
+	left:0;
+	right:0;
+	background:rgba(255,255,255,0.7);
+}
+#main .column .bottom .year
+{
+	font-size:3rem;
+	margin-top:10rem;
+}
+#main .column .bottom .period
+{
+	font-size:5rem;
+	margin-top:2rem;
+}

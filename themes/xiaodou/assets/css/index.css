@@ -17,10 +17,11 @@ html{
 	height:5rem;
 } 
 #main #mainRight #weather .weatherTitle{
-	height:2rem;
+	height:5rem;
 }
 #main #mainRight #weather .weatherItem{
-	height:15rem;
+	height:12rem;
+	font-size:1.1rem;
 } 
 #main #mainRight #siChuanHot{
 	height:22rem;

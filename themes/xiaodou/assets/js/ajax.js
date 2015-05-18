@@ -1,4 +1,4 @@
-function sendAjaxRequest(url, target, backcall) {
+function sendAjaxRequest(url, backcall) {
     var XMLHttpReq;
     try {
         XMLHttpReq = new ActiveXObject("Msxml2.XMLHTTP"); //IE高版本创建XMLHTTP

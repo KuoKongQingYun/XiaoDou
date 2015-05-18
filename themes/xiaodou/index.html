@@ -28,40 +28,41 @@
 <div id="main" class="am-g">
   <div id="mainLeft" class="am-u-md-8 am-g-collapse">
     <div class="am-g">
-      <video id="videoElement" class="am-u-md-12" style="background:#000;" src="assets/movie/movie.mp4" controls></video>
+	<video id="videoElement" class="am-u-md-12" style="background:#000;" src="http://kkqy_php.jd-app.com/movie.mp4" autoplay controls></video>
+      <!--<video id="videoElement" class="am-u-md-12" style="background:#000;" src="_assets/mov/movie.mp4" autoplay controls></video>-->
     </div>
     <div class="am-g">
-      <div id="more" class="am-u-md-12 am-padding-vertical" style="background:rgb(185,185,185);"><a href="" class="am-fr am-margin-right am-text-primary">更多</a></div>
+      <div id="more" class="am-u-md-12 am-padding-vertical" style="background:rgb(185,185,185);"><a href="category.html" class="am-fr am-margin-right am-text-primary">更多</a></div>
     </div>
   </div>
   <div id="mainRight" class="am-u-md-4">
     <div id="weather" class="am-g">
       <div class="am-u-md-12">
         <div class="am-g">
-          <div class="am-u-md-12 am-text-center white weatherTitle" style="background:rgb(9,26,62);">四川·成都</div>
+          <div class="am-u-md-12 am-text-center white weatherTitle" style="background:rgb(9,26,62);">四川·成都<br/>PM2.5:<span id="pm25"></span></div>
         </div>
       </div>
       <div class="am-u-md-12">
         <div class="am-g">
-          <div class="am-u-md-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(9,26,62);"><img src="http://api.map.baidu.com/images/weather/night/yin.png"/>
-            <div>今天</div>
-            <div>阵雨转阴</div>
-            <div>30 ~ 20℃</div>
+          <div id="weatherOne" class="am-u-sm-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(9,26,62);"><img class="pic" src="http://api.map.baidu.com/images/weather/night/yin.png"/>
+            <div class="date">今天</div>
+            <div class="sky">阵雨转阴</div>
+            <div class="temperature">30 ~ 20℃</div>
           </div>
-          <div class="am-u-md-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(58,63,79);"><img src="http://api.map.baidu.com/images/weather/night/yin.png"/>
-            <div>周五 05月15日</div>
-            <div>阵雨转阴</div>
-            <div>30 ~ 20℃</div>
+          <div id="weatherTwo" class="am-u-sm-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(58,63,79);"><img class="pic" src="http://api.map.baidu.com/images/weather/night/yin.png"/>
+            <div class="date">今天</div>
+            <div class="sky">阵雨转阴</div>
+            <div class="temperature">30 ~ 20℃</div>
           </div>
-          <div class="am-u-md-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(92,99,119);"><img src="http://api.map.baidu.com/images/weather/night/yin.png"/>
-            <div>周五 05月15日</div>
-            <div>阵雨转阴</div>
-            <div>30 ~ 20℃</div>
+          <div id="weatherThree" class="am-u-sm-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(92,99,119);"><img class="pic" src="http://api.map.baidu.com/images/weather/night/yin.png"/>
+            <div class="date">今天</div>
+            <div class="sky">阵雨转阴</div>
+            <div class="temperature">30 ~ 20℃</div>
           </div>
-          <div class="am-u-md-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(100,100,100);"><img src="http://api.map.baidu.com/images/weather/night/yin.png"/>
-            <div>周五 05月15日</div>
-            <div>阵雨转阴</div>
-            <div>30 ~ 20℃</div>
+          <div id="weatherFour" class="am-u-sm-3 am-text-center white weatherItem am-padding-vertical" style="background:rgb(100,100,100);"><img class="pic" src="http://api.map.baidu.com/images/weather/night/yin.png"/>
+            <div class="date">今天</div>
+            <div class="sky">阵雨转阴</div>
+            <div class="temperature">30 ~ 20℃</div>
           </div>
         </div>
       </div>
@@ -91,7 +92,7 @@
 <div id="foot" class="am-g">
     <div class="am-u-md-12 am-padding-vertical-xs" style="background:rgb(72,79,99)">
       <marquee onmouseover=this.stop() onmouseout=this.start()>
-      <div class="white am-text-xl">百度新闻是包含海量资讯的新闻服务平台,真实反映每时每刻的新闻热点。您可以搜索新闻事件、热点话题、人物动态、产品资讯等,快速了解它们的最新进展。</div>
+      <div class="white am-text-xl am-text-nowrap">小斗视频演示系统是包含海量资讯的视频平台,真实反映每时每刻的新闻热点。您可以搜索新闻事件、热点话题、人物动态、产品资讯等,快速了解它们的最新进展。</div>
       </marquee>
     </div>
 </div>
@@ -109,11 +110,41 @@
 <script src="assets/js/amazeui.min.js"></script> 
 <script src="assets/js/ajax.js"></script> 
 <!--<![endif]--> 
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=F6c61106916aba82f463f978f6eab709"></script>
+
 <script type="text/javascript" language="javascript">
 //初始化天气
-function initWeather(jsonInfo){
-		
-	};
+function initWeather(result){
+		$('#pm25')[0].innerHTML=result.results[0].pm25;
+		$('#weatherOne .pic').attr("src",result.results[0].weather_data[0].dayPictureUrl);
+		$('#weatherOne .date')[0].innerHTML=result.results[0].weather_data[0].date;
+		$('#weatherOne .sky')[0].innerHTML=result.results[0].weather_data[0].weather;
+		$('#weatherOne .temperature')[0].innerHTML=result.results[0].weather_data[1].temperature;
+		$('#weatherTwo .pic').attr("src",result.results[0].weather_data[1].dayPictureUrl);
+		$('#weatherTwo .date')[0].innerHTML=result.results[0].weather_data[1].date;
+		$('#weatherTwo .sky')[0].innerHTML=result.results[0].weather_data[1].weather;
+		$('#weatherTwo .temperature')[0].innerHTML=result.results[0].weather_data[2].temperature;
+		$('#weatherThree .pic').attr("src",result.results[0].weather_data[2].dayPictureUrl);
+		$('#weatherThree .date')[0].innerHTML=result.results[0].weather_data[2].date;
+		$('#weatherThree .sky')[0].innerHTML=result.results[0].weather_data[2].weather;
+		$('#weatherThree .temperature')[0].innerHTML=result.results[0].weather_data[3].temperature;
+		$('#weatherFour .pic').attr("src",result.results[0].weather_data[3].dayPictureUrl);
+		$('#weatherFour .date')[0].innerHTML=result.results[0].weather_data[3].date;
+		$('#weatherFour .sky')[0].innerHTML=result.results[0].weather_data[3].weather;
+		$('#weatherFour .temperature')[0].innerHTML=result.results[0].weather_data[3].temperature;	
+}; 
+function getCity(result){
+	var s = document.createElement("SCRIPT");
+	s.type = "text/javascript";
+	s.src = "http://api.map.baidu.com/telematics/v3/weather?location="+result.name+"&output=json&ak=F6c61106916aba82f463f978f6eab709&callback=initWeather";
+	document.getElemnetsByTagName("HEAD")[0].appendChild(s);
+}
+
+//var currentCity = new BMap.LocalCity();
+//currentCity.get(getCity);
+//sendAjaxRequest('http://api.map.baidu.com/telematics/v3/weather?location=%E6%88%90%E9%83%BD&output=json&ak=F6c61106916aba82f463f978f6eab709',initWeather);
 </script>
+<script type="text/javascript" src="http://api.map.baidu.com/telematics/v3/weather?location=%E6%88%90%E9%83%BD&output=json&ak=F6c61106916aba82f463f978f6eab709&callback=initWeather"></script> 
 </body>
 </html>

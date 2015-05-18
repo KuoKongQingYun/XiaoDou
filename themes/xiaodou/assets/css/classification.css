@@ -7,6 +7,13 @@ ul{
 li{
 	margin:0;
 }
+video{
+	display:none;
+}
+video:fullscreen {
+	width:100%; height:100%;
+	display:block;
+}
 body{
 	background-size:cover;
 }
